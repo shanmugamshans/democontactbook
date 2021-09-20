@@ -1,0 +1,63 @@
+<div class="container">
+    <h4>{{title}}</h4>
+    <hr>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <div class="table-responsive mt-2">
+                <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>PhoneNo</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let items of tableData">
+                        <td>{{ items.id }}</td>
+                        <td (click)="clickData(items)" style="cursor: pointer;" data-toggle="modal" data-target="#exampleModal">{{ items.name }}</td>
+                        <td>{{ items.email }}</td>
+                        <td>{{ items.phoneno }}</td>
+                        <td class="text-center"><a class="font" (click)="navigation(items)"><i class="fa fa-edit"></i></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row text-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                <label for="">Name : </label><p>{{name}}</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                <label for="">Email : </label><p>{{email}}</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                <label for="">PhoneNo : </label><p>{{phone}}</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                <label for="">Address : </label><address>{{address}}</address>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <p>@Contact Book</p>
+        </div>
+      </div>
+    </div>
+  </div>

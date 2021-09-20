@@ -1,0 +1,47 @@
+<div class="login-page">
+	<div class="login-title">ContactBook</div>				
+	<div class="row no-gutters login-wrapper">
+		<div class="col-lg-8 col-md-8 col-sm-12 col-12">
+			<div class="login-bg">
+				<img src="./assets/image/bg.jpg" class="bg-svg" alt="">				
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-12 px-5 mt-3">
+            <h4>Login</h4>
+			<div class="login-main"> 
+				<div class="login-block">
+					<form [formGroup]="loginForm" #ngForm="ngForm" (ngSubmit)="login()">
+						<div class="form-group">
+							<fieldset>
+								<legend>Email</legend>
+								<input type="email" name="" class="form-control loginform" formControlName="username">
+							</fieldset>
+						</div>
+						<div *ngIf="ngForm.submitted">
+							<div class="alert alert-danger" *ngIf="login_form_validate.username.errors?.required">
+								Email is required</div>
+								<div class="alert alert-danger" *ngIf="login_form_validate.username.errors?.pattern">
+									Invalid Email</div>
+						</div>
+						<div class="form-group" id="input-password">
+							<fieldset>
+								<legend>Password</legend>
+								<input type="password" name="password" class="lock form-control loginform" formControlName="password">
+							</fieldset>
+						</div>
+						<div *ngIf="ngForm.submitted">
+							<div class="alert alert-danger" *ngIf="login_form_validate.password.errors?.required">
+								Password is required</div>
+						</div>
+                        <div class="text-center mt-4">
+                            <input type="submit" class="btn btn-success  w-100" name="Sign In" value="Login">
+                        </div>														
+					</form>				
+				</div>
+                <div class="text-center mt-4">
+                    <p>@ContactBook</p>
+                </div>
+		   	</div>
+		</div>
+	</div>		  
+</div>

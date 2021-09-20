@@ -1,0 +1,54 @@
+  <a id="show-sidebar" class="btn btn-sm btn-dark" (click)="sidebar()">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a class="tit">Contact Book</a>
+        <div id="close-sidebar" (click)="sidebar()">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name">
+            <strong>Shans</strong>
+          </span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>Menu</span>
+          </li>
+          <li>
+            <a routerLink="contactList">
+              <i class="fa fa-book"></i>
+              <span>Contact List</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="add">
+              <i class="fas fa-plus"></i>
+              <span>Add New Contatct</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a (click)="logout()" style="cursor: pointer;"> Logout
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>

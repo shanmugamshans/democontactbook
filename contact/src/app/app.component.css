@@ -1,0 +1,127 @@
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container h5{
+    text-align: center;
+    margin: 10px 0;
+}
+.main-container h2 {
+    margin: 0 0 80px 0;
+    color: #8373e6;
+    font-size: 30px;
+    font-family: "Sofia";
+    font-weight: 400;
+}
+.readio-buttons{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.custom-radio input{
+    display: none;
+}
+.radio-btn{
+    margin: 10px;
+    width: 180px;
+    height: 3rem;
+    border: 3px solid transparent;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px #c3c3c3;
+    cursor: pointer;
+}
+.radio-btn > i{
+    color: #ffffff;
+    background-color: #8373e6;
+    font-size: 14px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(4);
+    border-radius: 10px;
+    padding: 3px;
+    transition: 0.2s;
+    pointer-events: none;
+    opacity: 0;
+}
+.radio-btn .hobbies-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+.radio-btn .hobbies-icon i {
+    color: #8373e6;
+    font-size: 1rem;
+    margin-right: .5rem;
+    margin-bottom: .4rem;
+}
+
+.radio-btn .hobbies-icon h3 {
+    color: #8373e6;
+    font-family: "Sofia" sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.custom-radio input:checked + .radio-btn{
+    border: 3px solid #8373e6;
+}
+.custom-radio input:checked + .radio-btn > i{
+    opacity: 1;
+    transform: translateX(-50%);
+}
+
+  
+  /*Checkboxes styles*/
+
+  input[type="checkbox"] { display: none; }
+  
+  input[type="checkbox"] + label {
+    /* display: block; */
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px 'Open Sans', Arial, sans-serif;
+    color: #212529;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+  
+  input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #8373e6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+  }
+  
+  input[type="checkbox"]:checked + label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
